@@ -1,0 +1,54 @@
+---
+title: "R Notebook"
+output: github_document
+---
+
+# Theory of Action 
+
+When new R users in education are provided with scaffolding as they read the book and provided with relatable education datasets to practice with, they increase the likelihood of introducing data science into the education work environment.
+
+# Measuring engagement with scaffolding techniques 
+
+Survey questions like:
+
+How true were the following statements after you read the book 
+
+ - I learned from the vocabulary sections at the start of each chapter
+ - I learned from asking questions in the DSIEUR Slack channel 
+ - I learned from reviewing the coding walkthroughs before practicing 
+ - I learned from reviewing the preview questions at the start of each chapter 
+ 
+# Measuring engagement with relatable education datasets 
+
+Survey questions like: 
+
+How true were the following statements after you read the book 
+
+ - The datasets used in the walkthroughs are ones that might appear in my education workplace 
+
+# Measuring introduction of data science into the education work place 
+
+Survey questions like: 
+
+How true were the following statements after you read the book 
+
+ - During the time I was reading the book, data science techniques were being used regulalry in my education workplace
+ - After reading the book, I could identify at least one action I could take to begin introducing data science techniques in my education workplace 
+ - After reading the book, I acted on at least one action item to introduce data science techniques in my education workplace 
+
+```{r}
+# Example dataset
+library(tidyverse) 
+
+surveys <- tibble(
+  respondent_id = rep(c(1:2), 3), 
+  scaffolding = sample(1:5, 6, replace = TRUE), 
+  datasets = sample(1:5, 6, replace = TRUE), 
+  used_techniques = sample(1:5, 6, replace = TRUE), 
+)
+surveys
+```
+
+# Other data 
+
+Conduct interviews to learn more about the experience of reading the book and trying the ideas in the workplace. 
